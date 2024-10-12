@@ -8,16 +8,11 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Logo from '../Logo';
-
-const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/about-us', label: 'About Us' },
-  { href: '/destinations', label: 'Destinations' },
-  { href: '/testimonials', label: 'Testimonials' },
-  { href: '/contact', label: 'Contact Us' },
-];
+import { usePathname } from 'next/navigation';
+import { navItems } from '@/const';
 
 export default function MobileNavbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -38,7 +33,12 @@ export default function MobileNavbar() {
         <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
             {navItems.map(item => (
-              <MobileLink key={item.href} href={item.href} onOpenChange={setIsOpen}>
+              <MobileLink
+                className={pathname === item.href ? 'text-color-1 underline' : ''}
+                key={item.href}
+                href={item.href}
+                onOpenChange={setIsOpen}
+              >
                 {item.label}
               </MobileLink>
             ))}
