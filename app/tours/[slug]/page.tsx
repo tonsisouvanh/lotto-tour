@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Calendar, Clock, MapPin, Users, Star, DollarSign, Utensils, Hotel, Plane } from 'lucide-react';
+import Image from 'next/image';
 
 const tourData = {
   name: 'Enchanting Japan: Cultural Odyssey',
@@ -118,7 +119,13 @@ export default function TourDetailPage() {
               <Star className="mr-1" size={16} fill="gold" /> {tourData.rating} ({tourData.reviewCount} reviews)
             </span>
           </div>
-          <img src={tourData.images[0]} alt={tourData.name} className="mb-6 h-[400px] w-full rounded-lg object-cover" />
+          <Image
+            width={500}
+            height={500}
+            src={tourData.images[0]}
+            alt={tourData.name}
+            className="mb-6 h-[400px] w-full rounded-lg object-cover"
+          />
 
           <Tabs defaultValue="overview" className="mb-8">
             <TabsList>
@@ -184,7 +191,9 @@ export default function TourDetailPage() {
 
           <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {tourData.images.slice(1).map((image, index) => (
-              <img
+              <Image
+                width={500}
+                height={500}
                 key={index}
                 src={image}
                 alt={`Tour image ${index + 2}`}

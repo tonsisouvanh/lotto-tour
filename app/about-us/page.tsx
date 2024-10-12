@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Globe, Users, ThumbsUp, Heart } from 'lucide-react';
+import Image from 'next/image';
 
 const teamMembers = [
   {
@@ -79,7 +80,9 @@ export default function AboutUsPage() {
             </p>
           </div>
           <div className="relative h-96">
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/placeholder.svg?height=600&width=800"
               alt="LottoTour team on a mountain trek"
               className="absolute inset-0 h-full w-full rounded-lg object-cover shadow-lg"
@@ -103,7 +106,13 @@ export default function AboutUsPage() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {teamMembers.map((member, index) => (
             <Card key={index}>
-              <img src={member.image} alt={member.name} className="h-64 w-full rounded-t-lg object-cover" />
+              <Image
+                width={500}
+                height={500}
+                src={member.image}
+                alt={member.name}
+                className="h-64 w-full rounded-t-lg object-cover"
+              />
               <CardHeader>
                 <CardTitle>{member.name}</CardTitle>
                 <CardDescription>{member.role}</CardDescription>

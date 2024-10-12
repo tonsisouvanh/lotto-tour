@@ -79,8 +79,8 @@ export default function ToursPage() {
   const [priceRange, setPriceRange] = useState([0, 5000]);
   const [sortBy, setSortBy] = useState('price-low');
 
-  const destinations = [...new Set(toursData.map(tour => tour.destination))];
-  const types = [...new Set(toursData.map(tour => tour.type))];
+  const destinations = toursData.map(tour => tour.destination);
+  const types = toursData.map(tour => tour.type);
 
   useEffect(() => {
     const filteredTours = toursData.filter(

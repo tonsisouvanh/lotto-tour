@@ -3,6 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Quote, Star } from 'lucide-react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const testimonials = [
@@ -86,7 +87,13 @@ export default function TestimonialsPage() {
           <Card key={index} className="flex flex-col">
             <CardHeader>
               <div className="flex items-center space-x-4">
-                <img src={testimonial.image} alt={testimonial.name} className="h-12 w-12 rounded-full" />
+                <Image
+                  width={500}
+                  height={500}
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="h-12 w-12 rounded-full"
+                />
                 <div>
                   <CardTitle>{testimonial.name}</CardTitle>
                   <CardDescription>{testimonial.location}</CardDescription>
