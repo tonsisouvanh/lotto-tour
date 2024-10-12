@@ -29,8 +29,9 @@ const notoSansLao = Noto_Sans_Lao({
   weight: ['400', '500', '700'],
 });
 export const metadata: Metadata = {
-  title: 'TransMemo - Translate and Memorize',
-  description: 'Translate and memorize your favorite texts',
+  title: 'Discover Amazing Tours | Your Gateway to Adventure',
+  description:
+    'Explore unique destinations with our guided tours. From cultural immersions to nature expeditions, we offer personalized tour packages to make your travel dreams a reality.',
 };
 
 export default function RootLayout({
