@@ -1,4 +1,5 @@
 import { Award, Users, Compass, Shield } from 'lucide-react';
+import Heading from '../typography/Heading';
 
 const features = [
   {
@@ -28,7 +29,9 @@ export default function WhyChooseUsSection() {
   return (
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold">Why Choose Us</h2>
+        <div className="mx-auto mb-12 w-fit">
+          <Heading>Why Choose Us</Heading>
+        </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center">

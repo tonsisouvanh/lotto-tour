@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import Link from 'next/link';
+import Heading from '../typography/Heading';
 
 const tours = [
   {
@@ -58,7 +59,9 @@ export default function TourHighlightsSection() {
         alt=""
       />
       <div className="z-2 container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold">Our Popular Tours</h2>
+        <div className="mx-auto mb-12 w-fit">
+          <Heading>Our Popular Tours</Heading>
+        </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {tours.map((tour, index) => (
             <Card key={index} className="overflow-hidden">

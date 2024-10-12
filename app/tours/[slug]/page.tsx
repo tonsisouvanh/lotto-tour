@@ -1,10 +1,10 @@
 'use client';
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Calendar, Clock, MapPin, Users, Star, DollarSign, Utensils, Hotel, Plane } from 'lucide-react';
+import { Calendar, Clock, MapPin, Star, Users } from 'lucide-react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const tourData = {
   name: 'Enchanting Japan: Cultural Odyssey',

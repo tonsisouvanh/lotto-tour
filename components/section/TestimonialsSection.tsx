@@ -1,6 +1,7 @@
 import { Star } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+import Heading from '../typography/Heading';
 
 const testimonials = [
   {
@@ -41,8 +42,9 @@ export default function TestimonialsSection() {
   return (
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold">What Our Travelers Say</h2>
-
+        <div className="mx-auto mb-12 w-fit">
+          <Heading>What Our Travelers Say</Heading>
+        </div>
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="overflow-hidden">

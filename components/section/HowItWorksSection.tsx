@@ -1,4 +1,5 @@
-import { MapPin, CalendarCheck,Luggage, TreePalm } from 'lucide-react';
+import { MapPin, CalendarCheck, Luggage, TreePalm } from 'lucide-react';
+import Heading from '../typography/Heading';
 
 const steps = [
   {
@@ -27,7 +28,9 @@ export default function HowItWorksSection() {
   return (
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold">How It Works</h2>
+        <div className="mx-auto mb-12 w-fit">
+          <Heading>How It Works</Heading>
+        </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
             <div key={index} className="flex flex-col items-center text-center">

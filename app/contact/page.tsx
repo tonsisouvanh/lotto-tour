@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import Heading from '@/components/typography/Heading';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -157,7 +158,9 @@ export default function ContactPage() {
 
       {/* FAQ Section */}
       <section className="mt-16">
-        <h2 className="mb-8 text-center text-3xl font-semibold">Frequently Asked Questions</h2>
+        <div className="mx-auto mb-12 w-fit">
+          <Heading>Frequently Asked Questions</Heading>
+        </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <Card>
             <CardHeader>

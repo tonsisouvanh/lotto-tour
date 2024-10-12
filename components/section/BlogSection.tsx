@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import Heading from '../typography/Heading';
 
 const blogPosts = [
   {
@@ -34,7 +35,9 @@ export default function BlogSection() {
   return (
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold">Travel Tips & Inspiration</h2>
+        <div className="mx-auto mb-12 w-fit">
+          <Heading>Travel Tips & Inspiration</Heading>
+        </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post, index) => (
             <Card key={index} className="overflow-hidden">

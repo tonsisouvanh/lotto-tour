@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
+import Heading from '../typography/Heading';
 
 const featuredPrograms = [
   {
@@ -40,7 +41,9 @@ export default function FeaturedProgramsSection() {
   return (
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold">Featured Programs</h2>
+        <div className="mx-auto mb-12 w-fit">
+          <Heading>Featured Programs</Heading>
+        </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {featuredPrograms.map((program, index) => (
             <Card key={index} className="overflow-hidden">

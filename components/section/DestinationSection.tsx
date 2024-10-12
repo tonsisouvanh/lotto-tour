@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
+import Heading from '../typography/Heading';
 
 const destinations = [
   {
@@ -29,17 +30,18 @@ const destinations = [
 export default function DestinationsSection() {
   return (
     <section className="relative z-[1] py-16">
-      <Image
+      {/* <Image
         width={500}
         height={500}
         quality={100}
         src={'/assets/svg/light.svg'}
         className="absolute bottom-0 left-0 z-[-1] h-auto w-full object-contain"
         alt=""
-      />
+      /> */}
       <div className="container z-[2] mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold">Explore Our Destinations</h2>
-
+        <div className="mx-auto mb-12 w-fit">
+          <Heading>Explore Our Destinations</Heading>
+        </div>
         {/* Interactive Map (placeholder) */}
         <div className="mb-12 overflow-hidden rounded-lg shadow-lg">
           <Image

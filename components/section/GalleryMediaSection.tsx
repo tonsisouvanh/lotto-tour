@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import Image from 'next/image';
+import Heading from '../typography/Heading';
 
 const galleryImages = [
   {
@@ -36,8 +37,9 @@ export default function GalleryMediaSection() {
   return (
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold">Gallery & Highlights</h2>
-
+        <div className="mx-auto mb-12 w-fit">
+          <Heading>Gallery & Highlights</Heading>
+        </div>
         {/* Photo Gallery */}
         <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((image, index) => (

@@ -83,9 +83,9 @@ export default function AboutUsPage() {
             <Image
               width={500}
               height={500}
-              src="/placeholder.svg?height=600&width=800"
+              src="/assets/images/traveling-rafiki.png"
               alt="LottoTour team on a mountain trek"
-              className="absolute inset-0 h-full w-full rounded-lg object-cover shadow-lg"
+              className="absolute inset-0 h-full w-full object-contain"
             />
           </div>
         </div>

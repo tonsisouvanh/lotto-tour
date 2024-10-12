@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import Heading from '../typography/Heading';
 
 const faqs = [
   {
@@ -37,7 +38,9 @@ export default function FAQsSection() {
   return (
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold">Frequently Asked Questions</h2>
+        <div className="mx-auto mb-12 w-fit">
+          <Heading>Frequently Asked Questionsdd</Heading>
+        </div>
         <div className="mx-auto max-w-3xl">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (

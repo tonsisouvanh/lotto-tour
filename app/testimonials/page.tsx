@@ -1,5 +1,6 @@
 'use client';
 
+import Heading from '@/components/typography/Heading';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Quote, Star } from 'lucide-react';
@@ -66,8 +67,9 @@ export default function TestimonialsPage() {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="mb-8 text-center text-4xl font-bold">What Our Travelers Say</h1>
-
+      <div className="mx-auto mb-12 w-fit">
+        <Heading>What Our Travelers Say</Heading>
+      </div>
       <Tabs defaultValue="all" className="mb-8">
         <TabsList className="mx-auto grid w-full grid-cols-3 lg:w-[400px]">
           <TabsTrigger value="all" onClick={() => setFilter('all')}>
